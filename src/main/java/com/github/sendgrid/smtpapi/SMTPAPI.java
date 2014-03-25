@@ -128,9 +128,9 @@ public class SMTPAPI {
     }
     if (this.header.getJSONObject("filters").isNull(filter)) {
       this.header.getJSONObject("filters").put(filter, new JSONObject());
-      this.header.getJSONObject("filter").getJSONObject(filter).put("settings", new JSONObject());
+      this.header.getJSONObject("filters").getJSONObject(filter).put("settings", new JSONObject());
     }
-    this.header.getJSONObject("filter").getJSONObject(filter).getJSONObject("settings").put(setting, val);
+    this.header.getJSONObject("filters").getJSONObject(filter).getJSONObject("settings").put(setting, val);
     return this;
   }
 
@@ -140,9 +140,9 @@ public class SMTPAPI {
     }
     if (this.header.getJSONObject("filters").isNull(filter)) {
       this.header.getJSONObject("filters").put(filter, new JSONObject());
-      this.header.getJSONObject("filter").getJSONObject(filter).put("settings", new JSONObject());
+      this.header.getJSONObject("filters").getJSONObject(filter).put("settings", new JSONObject());
     }
-    this.header.getJSONObject("filter").getJSONObject(filter).getJSONObject("settings").put(setting, val);
+    this.header.getJSONObject("filters").getJSONObject(filter).getJSONObject("settings").put(setting, val);
     return this;
   }
 
