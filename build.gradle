@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'fatjar'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
 group         = 'com.sendgrid'
 version       = "0.0.1"
@@ -50,6 +52,50 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 task sourcesJar(type: Jar) {
   from sourceSets.main.allSource
   classifier = 'sources'
+}
+
+signing {
+    sign configurations.archives
+}
+
+uploadArchives {
+  repositories {
+    mavenDeployer {
+      beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+      repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+        authentication(userName: sonatypeUsername, password: sonatypePassword)
+      }
+
+      pom.project {
+        name 'sendgrid-java'
+        packaging 'jar'
+        description 'SMTPAPI Java helper library'
+        url 'https://github.com/scottmotte/smtpapi-java'
+
+        scm {
+          url 'scm:git@github.com:scottmotte/smtpapi-java.git'
+          connection 'scm:git@github.com:scottmotte/smtpapi-java.git'
+          developerConnection 'scm:git@github.com:scottmotte/smtpapi-java.git'
+        }
+
+        licenses {
+          license {
+            name 'MIT License'
+            url 'http://opensource.org/licenses/MIT'
+            distribution 'repo'
+          }
+        }
+
+        developers {
+          developer {
+            id 'scottmotte'
+            name 'Scott Motte'
+          }
+        }
+      }
+    }
+  }
 }
 
 artifacts {
