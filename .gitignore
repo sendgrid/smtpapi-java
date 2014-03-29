@@ -4,3 +4,7 @@ gradle
 gradlew
 gradlew.bat
 settings.gradle
+.idea
+*.iml
+out
+.DS_Store
