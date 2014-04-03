@@ -3,7 +3,7 @@ apply plugin: 'fatjar'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-group         = 'com.sendgrid'
+group         = 'com.sendgrid.smtapi'
 version       = "0.0.1"
 ext.packaging = 'jar'
 
@@ -53,7 +53,7 @@ task sourcesJar(type: Jar) {
   from sourceSets.main.allSource
   classifier = 'sources'
 }
-
+/*
 signing {
     sign configurations.archives
 }
@@ -97,7 +97,7 @@ uploadArchives {
     }
   }
 }
-
+*/
 artifacts {
   archives fatJar
 
