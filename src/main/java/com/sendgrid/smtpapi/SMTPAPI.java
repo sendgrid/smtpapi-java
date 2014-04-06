@@ -1,4 +1,4 @@
-package com.github.sendgrid.smtpapi;
+package com.sendgrid.smtpapi;
 
 import org.json.JSONObject;
 import org.json.JSONArray;

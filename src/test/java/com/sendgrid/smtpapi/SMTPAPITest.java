@@ -1,4 +1,4 @@
-package com.github.sendgrid.smtpapi;
+package com.sendgrid.smtpapi;
 
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.json.JSONObject;
