@@ -1,9 +1,11 @@
 package com.sendgrid.smtpapi;
 
-import org.json.JSONObject;
-import org.json.JSONArray;
-import org.json.JSONException;
 import java.util.Map;
+import java.util.ArrayList;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONException;
 
 public class SMTPAPI {
 
@@ -15,6 +17,14 @@ public class SMTPAPI {
 
   public SMTPAPI(JSONObject header) {
     this.header = header;
+  }
+
+  private static String[] toArray(JSONArray json) {
+    ArrayList<String> parse = new ArrayList<String>();
+    for (int i = 0; i < json.length(); i++) {
+      parse.add(json.getString(i));
+    }
+    return parse.toArray(new String[parse.size()]);
   }
 
   public SMTPAPI addTo(String to) throws JSONException {
@@ -34,8 +44,8 @@ public class SMTPAPI {
     return this;
   }
 
-  public JSONArray getTos() throws JSONException {
-    return this.header.getJSONArray("to");
+  public String[] getTos() throws JSONException {
+    return SMTPAPI.toArray(this.header.getJSONArray("to"));
   }
 
   public SMTPAPI addSubstitution(String key, String val) throws JSONException {
@@ -46,7 +56,7 @@ public class SMTPAPI {
     return this;
   }
 
-  public SMTPAPI addSubstitution(String key, String[] val) throws JSONException {
+  public SMTPAPI addSubstitutions(String key, String[] val) throws JSONException {
     for (int i = 0; i < val.length; i++) {
       addSubstitution(key, val[i]);
     }
@@ -89,7 +99,7 @@ public class SMTPAPI {
     return this;
   }
 
-  public SMTPAPI addCategory(String[] vals) throws JSONException {
+  public SMTPAPI addCategories(String[] vals) throws JSONException {
     for (int i = 0; i < vals.length; i++) {
       addCategory(vals[i]);
     }
@@ -101,8 +111,8 @@ public class SMTPAPI {
     return this;
   }
 
-  public JSONArray getCategories() throws JSONException {
-    return this.header.getJSONArray("category");
+  public String[] getCategories() throws JSONException {
+    return SMTPAPI.toArray(this.header.getJSONArray("category"));
   }
 
   public SMTPAPI addSection(String key, String val) throws JSONException {
@@ -112,6 +122,11 @@ public class SMTPAPI {
     this.header.getJSONObject("section").put(key, val);
     return this;
   }
+
+  public SMTPAPI setSections(Map<String, String> sec) throws JSONException {
+    return this.setSections(new JSONObject(sec));
+  }
+
 
   public SMTPAPI setSections(JSONObject sec) throws JSONException {
     this.header.put("section", sec);
