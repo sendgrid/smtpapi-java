@@ -10,7 +10,7 @@ TODO (Jar and Maven)
 
 ### Create headers
 
-```python
+```java
 import com.sendgrid.smtpapi.SMTPAPI;
 SMTPAPI header = new SMTPAPI();
 ```
