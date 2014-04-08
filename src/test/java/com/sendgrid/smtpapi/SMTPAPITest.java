@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.junit.Test;
+import org.junit.Assert;
 import org.junit.Before;
 
 public class SMTPAPITest {
@@ -18,21 +19,19 @@ public class SMTPAPITest {
   @Test public void testAddTo() throws JSONException {
     test.addTo("john@doe.com");
     String[] expected = new String[] {"john@doe.com"};
-    JSONAssert.assertEquals(new JSONArray(expected), test.getTos(), false);
+    Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testAddTos() throws JSONException {
-    String[] testTo = new String[] {"john@doe.com"};
-    test.addTo(testTo);
     String[] expected = new String[] {"john@doe.com"};
-    JSONAssert.assertEquals(new JSONArray(expected), test.getTos(), false);
+    test.addTo(expected);
+    Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testSetTos() throws JSONException {
-    String[] testTo = new String[] {"john@doe.com", "doe@john.com"};
-    test.addTo(testTo);
     String[] expected = new String[] {"john@doe.com", "doe@john.com"};
-    JSONAssert.assertEquals(new JSONArray(expected), test.getTos(), false);
+    test.addTo(expected);
+    Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testAddSubstitution() throws JSONException {
@@ -43,7 +42,7 @@ public class SMTPAPITest {
   }
 
   @Test public void testAddSubstitutions() throws JSONException {
-    test.addSubstitution("-name-", new String[]{"John", "Doe"});
+    test.addSubstitutions("-name-", new String[]{"John", "Doe"});
     JSONObject testObject = test.getSubstitutions();
     JSONObject expected = new JSONObject().put("-name-", new String[]{"John", "Doe"});
     JSONAssert.assertEquals(expected.toString(), testObject.toString(), false);
@@ -57,14 +56,14 @@ public class SMTPAPITest {
 
   @Test public void testAddCategory() throws JSONException {
     test.addCategory("test");
-    JSONArray expected = new JSONArray(new String[]{"test"});
-    JSONAssert.assertEquals(expected, test.getCategories(), false);
+    String[] expected = new String[]{"test"};
+    Assert.assertArrayEquals(expected, test.getCategories());
   }
 
   @Test public void testAddCategories() throws JSONException {
-    test.addCategory(new String[]{"test", "test2"});
-    JSONArray expected = new JSONArray(new String[]{"test", "test2"});
-    JSONAssert.assertEquals(expected, test.getCategories(), false);
+    String[] expected = new String[]{"test", "test2"};
+    test.addCategories(expected);
+    Assert.assertArrayEquals(expected, test.getCategories());
   }
 
   @Test public void testAddSection() throws JSONException {
