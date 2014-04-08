@@ -13,14 +13,16 @@ TODO (Jar and Maven)
 ```python
 import com.sendgrid.smtpapi.SMTPAPI;
 SMTPAPI header = new SMTPAPI();
-
 ```
 
 ### [To](http://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 ```java
 header.addTo('email@email.com');
+// or
 header.addTo(['email@email.com']);
+// or
 header.setTos(['email@email.com']);
+
 String[] tos = header.getTos();
 ```
 
@@ -28,7 +30,9 @@ String[] tos = header.getTos();
 
 ```java
 header.addSubstitution('key', 'value');
+// or
 header.setSubstitutions('key', ['value1', 'value2']);
+
 JSONObject subs = header.getSubstitutions();
 ```
 
@@ -36,21 +40,26 @@ JSONObject subs = header.getSubstitutions();
 
 ```java
 header.addUuniqueAarg('key', 'value');
+// or
 Map map = new HashMap<String, String>();
 map.put('unique', 'value');
 header.setUniqueArgs(map);
+// or
 JSONObject map = new JSONObject();
 map.put('unique', 'value');
 header.setUniqueArgs(map);
-JSONObject args = header.getUniqueArgs();
 
+JSONObject args = header.getUniqueArgs();
 ```
 ### [Categories](http://sendgrid.com/docs/API_Reference/SMTP_API/categories.html)
 
 ```java
 header.addCategory('category');
+// or
 header.addCategory(['categories']);
+// or
 header.setCategories(['category1', 'category2']);
+
 String[] cats = header.getCategories();
 ```
 
@@ -58,12 +67,15 @@ String[] cats = header.getCategories();
 
 ```java
 header.addSection('key', 'section');
+// or
 Map newSec = new HashMap();
 newSec.put('-section-', 'value');
 header.setSections(newSec);
+// or
 JSONObject newSec = new JSONObject();
 newSec.put('-section-', 'value');
 header.setSections(newSec);
+
 JSONObject sections = header.getSections();
 ```
 
@@ -72,6 +84,7 @@ JSONObject sections = header.getSections();
 ```java
 header.addFilter('filter', 'setting', 'value');
 header.addFilter('filter', 'setting', 1);
+
 JSONObject filters = header.getFilters();
 ```
 
