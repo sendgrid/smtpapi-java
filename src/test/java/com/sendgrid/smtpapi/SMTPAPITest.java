@@ -24,13 +24,13 @@ public class SMTPAPITest {
 
   @Test public void testAddTos() throws JSONException {
     String[] expected = new String[] {"john@doe.com"};
-    test.addTo(expected);
+    test.addTos(expected);
     Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testSetTos() throws JSONException {
     String[] expected = new String[] {"john@doe.com", "doe@john.com"};
-    test.addTo(expected);
+    test.setTos(expected);
     Assert.assertArrayEquals(expected, test.getTos());
   }
 

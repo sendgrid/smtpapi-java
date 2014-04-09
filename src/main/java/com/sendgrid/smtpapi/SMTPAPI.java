@@ -32,7 +32,7 @@ public class SMTPAPI {
     return this;
   }
 
-  public SMTPAPI addTo(String[] to) throws JSONException {
+  public SMTPAPI addTos(String[] to) throws JSONException {
     for(int i = 0; i < to.length; i ++) {
       addTo(to[i]);
     }
@@ -40,7 +40,7 @@ public class SMTPAPI {
   }
 
   public SMTPAPI setTos(String[] to) throws JSONException {
-    this.header.put("to", to);
+    this.header.put("to", new JSONArray(to));
     return this;
   }
 
