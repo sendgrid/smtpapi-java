@@ -135,12 +135,19 @@ JSONObject filters = header.getFilters();
 String headers = header.jsonString();
 ```
 
+## Running Tests
+
+```
+./gradlew check
+```
+
 ## Publishing to Maven
 
 This only works if you have the correct permissions - for admins only basically.
 
 ```
-gradle uploadArchives
+./gradlew
+./gradlew uploadArchives
 ```
 
 Login to [Sonatype](https://oss.sonatype.org/index.html#stagingRepositories).
