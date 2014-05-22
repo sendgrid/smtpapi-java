@@ -94,4 +94,12 @@ JSONObject filters = header.getFilters();
 String headers = header.jsonString();
 ```
 
+## Publishing to Maven
+
+This only works if you have the correct permissions - for admins only basically.
+
+```
+gradle uploadArchives
+```
+
 ## MIT

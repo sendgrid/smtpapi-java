@@ -38,9 +38,9 @@ fatJar {
 // copy fatJar to base project directory so they will be in git (and on github for download)
 build << {
   copy {
-    println "Copying ${fatJar.archiveName} to $projectDir/repo/com/github/sendgrid/$version"
+    println "Copying ${fatJar.archiveName} to $projectDir/repo/com/sendgrid/$version"
     from("$buildDir/libs/${fatJar.archiveName}")
-    into("$projectDir/repo/com/github/sendgrid/$version")
+    into("$projectDir/repo/com/sendgrid/$version")
   }
 }
 
@@ -71,12 +71,12 @@ uploadArchives {
         name 'sendgrid-java'
         packaging 'jar'
         description 'SMTPAPI Java helper library'
-        url 'https://github.com/scottmotte/smtpapi-java'
+        url 'https://github.com/sendgrid/smtpapi-java'
 
         scm {
-          url 'scm:git@github.com:scottmotte/smtpapi-java.git'
-          connection 'scm:git@github.com:scottmotte/smtpapi-java.git'
-          developerConnection 'scm:git@github.com:scottmotte/smtpapi-java.git'
+          url 'scm:git@github.com:sendgrid/smtpapi-java.git'
+          connection 'scm:git@github.com:sendgrid/smtpapi-java.git'
+          developerConnection 'scm:git@github.com:sendgrid/smtpapi-java.git'
         }
 
         licenses {
