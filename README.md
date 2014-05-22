@@ -4,7 +4,46 @@ This module will let you build SendGrid"s SMTP API headers with simplicity.
 
 ## Installing
 
-TODO (Jar and Maven)
+There are multiple ways to install this library. I recommend using Maven w/ Gradle.
+
+### via Maven w/ Gradle
+
+```groovy
+...
+dependencies {
+  ...
+  compile 'com.sendgrid:smtpapi-java:0.0.1'
+}
+
+repositories {
+  mavenCentral()
+}
+...
+```
+
+Then import the library - in the file appropriate to your Java project.
+
+```java
+import com.sendgrid.smtpapi.SMTPAPI;
+```
+
+### via jar file
+
+You can just drop the jar file in. It's a fat jar - it has all the dependencies built in.
+
+[smtpapi-0.0.1-jar.jar](https://github.com/sendgrid/smtpapi-java/blob/master/repo/com/sendgrid/0.0.1/smtpapi-0.0.1-jar.jar?raw=true)
+
+### via copy/paste
+
+#### Include the SendGrid.java library
+
+Copy and paste the [SMTPAPI.java](https://github.com/sendgrid/smtpapi-java/blob/master/src/main/java/com/sendgrid/smtpapi/SMTPAPI.java) file into your project. That file is available here: [https://github.com/sendgrid/smtpapi-java/blob/master/src/main/java/com/sendgrid/smtpapi/SMTPAPI.java](https://github.com/sendgrid/smtpapi-java/blob/master/src/main/java/com/sendgrid/smtpapi/SMTPAPI.java)
+
+Then import the library - in the file appropriate to your Java project.
+
+```java
+import com.sendgrid.smtpapi.SMTPAPI;
+```
 
 ## Examples
 
