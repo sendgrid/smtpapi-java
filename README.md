@@ -146,6 +146,12 @@ String headers = header.jsonString();
 This only works if you have the correct permissions - for admins only basically.
 
 ```
+cp gradle.properties.example gradle.properties
+```
+
+Edit the contents of gradle.properties with your credentials.
+
+```
 ./gradlew
 ./gradlew uploadArchives
 ```
