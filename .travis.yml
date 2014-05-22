@@ -3,3 +3,5 @@ jdk:
   - oraclejdk7
   - openjdk7
 
+script: './gradlew check'
+
