@@ -68,7 +68,7 @@ uploadArchives {
       }
 
       pom.project {
-        name 'sendgrid-java'
+        name 'smtpapi-java'
         packaging 'jar'
         description 'SMTPAPI Java helper library'
         url 'https://github.com/sendgrid/smtpapi-java'
