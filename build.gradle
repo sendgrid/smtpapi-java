@@ -9,6 +9,10 @@ group         = 'com.sendgrid'
 version       = "0.0.1"
 ext.packaging = 'jar'
 
+task wrapper(type: Wrapper) {
+  gradleVersion = '1.8'
+}
+
 buildscript {
   dependencies {
     classpath 'eu.appsatori:gradle-fatjar-plugin:0.1.2' // adds fatJar task
