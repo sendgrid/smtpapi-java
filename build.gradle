@@ -1,9 +1,11 @@
+import org.gradle.api.artifacts.maven.MavenDeployment
+
 apply plugin: 'java'
 apply plugin: 'fatjar'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-group         = 'com.sendgrid.smtapi'
+group         = 'com.sendgrid'
 version       = "0.0.1"
 ext.packaging = 'jar'
 
@@ -53,7 +55,7 @@ task sourcesJar(type: Jar) {
   from sourceSets.main.allSource
   classifier = 'sources'
 }
-/*
+
 signing {
     sign configurations.archives
 }
@@ -92,12 +94,16 @@ uploadArchives {
             id 'scottmotte'
             name 'Scott Motte'
           }
+          developer {
+            id 'elbuo8'
+            name 'Yamil Asusta'
+          }
         }
       }
     }
   }
 }
-*/
+
 artifacts {
   archives fatJar
 
