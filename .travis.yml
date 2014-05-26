@@ -3,7 +3,7 @@ jdk:
 - oraclejdk7
 - openjdk7
 after_script:
-- cd ..
+- ls
 - ./scripts/s3upload.sh
 env:
   global:
