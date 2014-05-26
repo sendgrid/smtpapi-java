@@ -3,7 +3,7 @@ jdk:
 - oraclejdk7
 - openjdk7
 after_script:
-- ls
+- ./gradlew build
 - ./scripts/s3upload.sh
 env:
   global:
