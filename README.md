@@ -33,7 +33,7 @@ import com.sendgrid.smtpapi.SMTPAPI;
 
 You can just drop the jar file in. It's a fat jar - it has all the dependencies built in.
 
-[smtpapi-0.0.1-jar.jar](https://github.com/sendgrid/smtpapi-java/blob/master/repo/com/sendgrid/0.0.1/smtpapi-0.0.1-jar.jar?raw=true)
+[smtpapi-jar.jar](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-java/smtpapi-java.jar)
 
 ### via copy/paste
 
