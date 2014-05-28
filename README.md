@@ -59,8 +59,6 @@ String[] tos = header.getTos();
 
 ```java
 header.addSubstitution("key", "value");
-// or
-header.setSubstitutions("key", ["value1", "value2"]);
 
 JSONObject subs = header.getSubstitutions();
 ```
