@@ -170,7 +170,7 @@ public class SMTPAPI {
     return this.header.getJSONObject("filters");
   }
 
-  public String escapeUnicode(String input) {
+  private String escapeUnicode(String input) {
     StringBuilder sb = new StringBuilder();
     int len = input.length();
     for (int i = 0; i < len; i++) {
