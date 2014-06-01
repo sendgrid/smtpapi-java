@@ -170,7 +170,21 @@ public class SMTPAPI {
     return this.header.getJSONObject("filters");
   }
 
+  private String escapeUnicode(String input) {
+    StringBuilder sb = new StringBuilder();
+    int len = input.length();
+    for (int i = 0; i < len; i++) {
+      int code = Character.codePointAt(input, i);
+      if (code > 127) {
+        sb.append(String.format("\\u%x", code));
+      } else {
+        sb.append(String.format("%c", code));
+      }
+    }
+    return sb.toString();
+  }
+
   public String jsonString() {
-    return this.header.toString();
+    return escapeUnicode(this.header.toString());
   }
 }
