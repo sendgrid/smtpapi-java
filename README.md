@@ -14,7 +14,7 @@ Choose your installation method - Maven w/ Gradle (recommended) or Jar file.
 ...
 dependencies {
   ...
-  compile 'com.sendgrid:smtpapi-java:0.0.1'
+  compile 'com.sendgrid:smtpapi-java:0.0.2'
 }
 
 repositories {
