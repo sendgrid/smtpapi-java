@@ -1,6 +1,6 @@
 # SMTPAPI for Java
 
-This module will let you build SendGrid"s SMTP API headers with simplicity.
+This module will let you build SendGrid's SMTP API headers with simplicity.
 
 [![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-java)
 
@@ -66,7 +66,7 @@ JSONObject subs = header.getSubstitutions();
 ### [Unique Arguments](http://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html)
 
 ```java
-header.addUuniqueAarg("key", "value");
+header.addUniqueAarg("key", "value");
 // or
 Map map = new HashMap<String, String>();
 map.put("unique", "value");
