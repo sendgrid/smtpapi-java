@@ -23,7 +23,7 @@ allprojects {
 }
 
 group         = 'com.sendgrid'
-version       = "0.1.0"
+version       = "0.1.1"
 ext.packaging = 'jar'
 
 if (!hasProperty("sonatypeUsername")) {
