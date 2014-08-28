@@ -37,7 +37,7 @@ public class SMTPAPITest {
   @Test public void testAddSubstitution() throws JSONException {
     test.addSubstitution("-name-", "John");
     JSONObject testObject = test.getSubstitutions();
-    JSONObject expected = new JSONObject().append("-name-", "John");
+    JSONObject expected = new JSONObject().put("-name-", new JSONArray().put("John"));
     JSONAssert.assertEquals(expected, testObject, false);
   }
 

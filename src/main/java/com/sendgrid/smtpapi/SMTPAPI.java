@@ -28,7 +28,10 @@ public class SMTPAPI {
   }
 
   public SMTPAPI addTo(String to) throws JSONException {
-    this.header.append("to", to);
+    if (!this.header.has("to")) {
+			this.header.put("to", new JSONArray());
+		}
+		this.header.accumulate("to", to);
     return this;
   }
 
@@ -52,7 +55,11 @@ public class SMTPAPI {
     if (this.header.isNull("sub")) {
       this.header.put("sub", new JSONObject());
     }
-    this.header.getJSONObject("sub").append(key, val);
+		JSONObject subs = this.header.getJSONObject("sub");
+		if (!subs.has(key)) {
+			subs.put(key, new JSONArray());
+		}
+    subs.accumulate(key, val);
     return this;
   }
 
@@ -95,7 +102,10 @@ public class SMTPAPI {
   }
 
   public SMTPAPI addCategory(String val) throws JSONException {
-    this.header.append("category", val);
+    if (!this.header.has("category")) {
+			this.header.put("category", new JSONArray());
+		}
+		this.header.accumulate("category", val);
     return this;
   }
 
