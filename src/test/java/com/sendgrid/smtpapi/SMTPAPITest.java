@@ -70,7 +70,9 @@ public class SMTPAPITest {
   @Test public void testJsonString() {
     test.addCategory("カテゴリUnicode");
     test.addCategory("カテゴリ2Unicode");
-    String expected = "{\"category\":[\"\\u30ab\\u30c6\\u30b4\\u30eaUnicode\",\"\\u30ab\\u30c6\\u30b4\\u30ea2Unicode\"]}";
+    //test.addCategory("𝄞");
+    test.addCategory("鼖");
+    String expected = "{\"category\":[\"\\u30ab\\u30c6\\u30b4\\u30eaUnicode\",\"\\u30ab\\u30c6\\u30b4\\u30ea2Unicode\",\"\\ud87e\\ude1b\"]}";
     Assert.assertEquals(expected, test.jsonString());
   }
 
