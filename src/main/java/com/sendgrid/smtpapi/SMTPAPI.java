@@ -180,6 +180,15 @@ public class SMTPAPI {
     return this.header.getJSONObject("filters");
   }
 
+  public SMTPAPI setASMGroupId(int val) throws JSONException{
+    this.header.put("asm_group_id", val);
+    return this;
+  }
+
+  public Integer getASMGroupId() throws JSONException{
+    return this.header.has("asm_group_id") ? this.header.optInt("asm_group_id") : null;
+  }
+
   private String escapeUnicode(String input) {
     StringBuilder sb = new StringBuilder();
     int len = input.length();

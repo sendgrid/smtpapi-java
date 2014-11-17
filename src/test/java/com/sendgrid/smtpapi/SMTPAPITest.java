@@ -95,4 +95,9 @@ public class SMTPAPITest {
     JSONAssert.assertEquals(expected.toString(), testObject, false);
   }
 
+  @Test public void testSetASMGroupId() throws JSONException {
+    test.setASMGroupId(1);
+    Assert.assertEquals(new Integer(1), test.getASMGroupId());
+  }
+
 }
