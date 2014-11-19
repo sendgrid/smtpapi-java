@@ -95,4 +95,10 @@ public class SMTPAPITest {
     JSONAssert.assertEquals(expected.toString(), testObject, false);
   }
 
+  @Test public void testSetSendAt() throws JSONException {
+    int expected = 12345;
+    test.setSendAt(expected);
+    Assert.assertEquals(expected, test.getSendAt());
+  }
+
 }

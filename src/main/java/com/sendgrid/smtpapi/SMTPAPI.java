@@ -180,6 +180,15 @@ public class SMTPAPI {
     return this.header.getJSONObject("filters");
   }
 
+  public SMTPAPI setSendAt(int sendAt) throws JSONException {
+    this.header.put("send_at", sendAt);
+    return this;
+  }
+
+  public int getSendAt() throws JSONException {
+    return this.header.getInt("send_at");
+  }
+
   private String escapeUnicode(String input) {
     StringBuilder sb = new StringBuilder();
     int len = input.length();
