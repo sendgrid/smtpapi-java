@@ -186,7 +186,7 @@ public class SMTPAPI {
     for (int i = 0; i < len; i++) {
       int code = Character.codePointAt(input, i);
       if (code > 127) {
-        sb.append(String.format("\\u%x", code));
+        sb.append(String.format("\\u%04x", code));
       } else {
         sb.append(String.format("%c", code));
       }

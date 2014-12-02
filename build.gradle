@@ -12,7 +12,7 @@
  */
 
 apply plugin: 'java'
-apply plugin: 'fatjar'
+apply plugin: 'eu.appsatori.fatjar'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
@@ -37,10 +37,10 @@ task wrapper(type: Wrapper) {
 
 buildscript {
   dependencies {
-    classpath 'eu.appsatori:gradle-fatjar-plugin:0.1.2' // adds fatJar task
+    classpath 'eu.appsatori:gradle-fatjar-plugin:0.3' // adds fatJar task
   }
   repositories {
-    mavenCentral()
+    jcenter()
   }
 }
 
