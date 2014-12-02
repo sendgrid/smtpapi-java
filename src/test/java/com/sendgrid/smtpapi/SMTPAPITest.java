@@ -61,18 +61,18 @@ public class SMTPAPITest {
   }
 
   @Test public void testAddCategoryUnicode() throws JSONException {
-    test.addCategory("カテゴリUnicode");
+    test.addCategory("カテゴリUñicode");
     test.addCategory("カテゴリ2Unicode");
-    String[] expected = new String[]{"カテゴリUnicode", "カテゴリ2Unicode"};
+    String[] expected = new String[]{"カテゴリUñicode", "カテゴリ2Unicode"};
     Assert.assertArrayEquals(expected, test.getCategories());
   }
 
   @Test public void testJsonString() {
-    test.addCategory("カテゴリUnicode");
+    test.addCategory("カテゴリUñicode");
     test.addCategory("カテゴリ2Unicode");
     //test.addCategory("𝄞");
     test.addCategory("鼖");
-    String expected = "{\"category\":[\"\\u30ab\\u30c6\\u30b4\\u30eaUnicode\",\"\\u30ab\\u30c6\\u30b4\\u30ea2Unicode\",\"\\ud87e\\ude1b\"]}";
+    String expected = "{\"category\":[\"\\u30ab\\u30c6\\u30b4\\u30eaU\\u00f1icode\",\"\\u30ab\\u30c6\\u30b4\\u30ea2Unicode\",\"\\ud87e\\ude1b\"]}";
     Assert.assertEquals(expected, test.jsonString());
   }
 

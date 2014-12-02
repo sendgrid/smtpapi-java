@@ -199,9 +199,9 @@ public class SMTPAPI {
         // surrogate pair
         int hi = (codePointArray[i] - 0x10000) / 0x400 + 0xD800;
         int lo = (codePointArray[i] - 0x10000) % 0x400 + 0xDC00;
-        sb.append(String.format("\\u%x\\u%x", hi, lo));
+        sb.append(String.format("\\u%04x\\u%04x", hi, lo));
       } else if (codePointArray[i] > 127) {
-        sb.append(String.format("\\u%x",codePointArray[i]));
+        sb.append(String.format("\\u%04x",codePointArray[i]));
       } else {
         sb.append(String.format("%c", codePointArray[i]));
       }
