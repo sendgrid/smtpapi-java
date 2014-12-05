@@ -100,4 +100,10 @@ public class SMTPAPITest {
     Assert.assertEquals(new Integer(1), test.getASMGroupId());
   }
 
+  @Test public void testSetSendAt() throws JSONException {
+    int expected = 12345;
+    test.setSendAt(expected);
+    Assert.assertEquals(expected, test.getSendAt());
+  }
+
 }

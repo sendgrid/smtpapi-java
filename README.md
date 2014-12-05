@@ -115,12 +115,21 @@ header.addFilter("filter", "setting", 1);
 JSONObject filters = header.getFilters();
 ```
 
+<<<<<<< HEAD
 ### [ASM Group Id](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
 
 ```java
 header.setASMGroupId(1);
 
 Integer groupId = header.getASMGroupId();
+=======
+### [Scheduling](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
+
+```java
+header.setSendAt(1416427645)
+
+int sendAt = header.getSendAt();
+>>>>>>> b0679e089f814a9bdb687e75bb9eae07fbb3630f
 ```
 
 ### Get Headers
