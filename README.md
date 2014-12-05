@@ -115,6 +115,14 @@ header.addFilter("filter", "setting", 1);
 JSONObject filters = header.getFilters();
 ```
 
+### [ASM Group Id](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
+
+```java
+header.setASMGroupId(1);
+
+Integer groupId = header.getASMGroupId();
+```
+
 ### Get Headers
 
 ```java
