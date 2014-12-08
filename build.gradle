@@ -23,7 +23,7 @@ allprojects {
 }
 
 group         = 'com.sendgrid'
-version       = '1.0.1'
+version       = '1.1.0'
 ext.packaging = 'jar'
 
 if (!hasProperty("sonatypeUsername")) {
@@ -46,8 +46,8 @@ buildscript {
 
 dependencies {
   compile 'org.json:json:20140107'
-  testCompile group:'org.skyscreamer', name:'jsonassert', version:'1.+'
-  testCompile group:'junit', name:'junit', version:'4.+'
+  testCompile group:'org.skyscreamer', name:'jsonassert', version:'1.2.3'
+  testCompile group:'junit', name:'junit', version:'4.12'
 }
 
 repositories {
