@@ -8,6 +8,13 @@ import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Before;
 
+import static org.junit.Assert.*;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class SMTPAPITest {
 
   SMTPAPI test;
@@ -15,6 +22,34 @@ public class SMTPAPITest {
   @Before public void initialize() {
     test = new SMTPAPI();
   }
+
+  @Test public void testVersion() {
+    Assert.assertEquals("1.1.1", test.getVersion());
+  }
+
+  @Test public void testBuildGradleVersion() {
+    try {
+      BufferedReader br = new BufferedReader(new FileReader("./build.gradle"));
+      String line = br.readLine();
+      String regex = "version\\s*=\\s*'" + test.getVersion() + "'";
+
+      while (line != null) {
+        if (line.matches(regex)) {
+          br.close();
+          return;
+        }
+        line = br.readLine();
+      }
+      br.close();
+      fail("build.gradle version does not match");
+    } catch (FileNotFoundException e) {
+      e.printStackTrace();
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+  }
+
 
   @Test public void testAddTo() throws JSONException {
     test.addTo("john@doe.com");

@@ -9,6 +9,8 @@ import org.json.JSONException;
 
 public class SMTPAPI {
 
+  private static final String VERSION = "1.1.1";
+
   private JSONObject header = new JSONObject();
 
   public SMTPAPI()  {
@@ -17,6 +19,10 @@ public class SMTPAPI {
 
   public SMTPAPI(JSONObject header) {
     this.header = header;
+  }
+
+  public String getVersion() {
+    return VERSION;
   }
 
   private static String[] toArray(JSONArray json) {
