@@ -231,4 +231,8 @@ public class SMTPAPI {
   public String jsonString() {
     return escapeUnicode(this.header.toString());
   }
+
+  public String rawJsonString() {
+    return this.header.toString();
+  }
 }

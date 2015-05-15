@@ -76,6 +76,14 @@ public class SMTPAPITest {
     Assert.assertEquals(expected, test.jsonString());
   }
 
+  @Test public void testRawJsonString() {
+    test.addCategory("カテゴリUñicode");
+    test.addCategory("カテゴリ2Unicode");
+    test.addCategory("鼖");
+    String expected = "{\"category\":[\"カテゴリUñicode\",\"カテゴリ2Unicode\",\"鼖\"]}";
+    Assert.assertEquals(expected, test.rawJsonString());
+  }
+
   @Test public void testAddCategories() throws JSONException {
     String[] expected = new String[]{"test", "test2"};
     test.addCategories(expected);
