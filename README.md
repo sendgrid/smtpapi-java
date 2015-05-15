@@ -137,6 +137,11 @@ int sendAt = header.getSendAt();
 String headers = header.jsonString();
 ```
 
+If you need the unescaped JSON string.
+```java
+String rawJson = header.rawJsonString();
+```
+
 ## Running Tests
 
 ```
