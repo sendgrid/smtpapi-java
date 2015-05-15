@@ -2,7 +2,7 @@
 
 This module will let you build SendGrid's SMTP API headers with simplicity.
 
-[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.png?branch=master)](https://travis-ci.org/sendgrid/smtpapi-java)
+[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.svg?branch=master)](https://travis-ci.org/sendgrid/smtpapi-java)
 
 ## Installing
 
@@ -14,7 +14,7 @@ Choose your installation method - Maven w/ Gradle (recommended) or Jar file.
 ...
 dependencies {
   ...
-  compile 'com.sendgrid:smtpapi-java:1.0.0'
+  compile 'com.sendgrid:smtpapi-java:1.2.0'
 }
 
 repositories {

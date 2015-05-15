@@ -24,7 +24,7 @@ public class SMTPAPITest {
   }
 
   @Test public void testVersion() {
-    Assert.assertEquals("1.1.1", test.getVersion());
+    Assert.assertEquals("1.2.0", test.getVersion());
   }
 
   @Test public void testBuildGradleVersion() {
