@@ -45,7 +45,7 @@ public class SMTPAPI {
 	}
 
 	private static String[] toArray(JSONArray json) {
-		final List<String> parse = new ArrayList<>();
+		final List<String> parse = new ArrayList<String>();
 		for (int i = 0; i < json.length(); i++) {
 			parse.add(json.getString(i));
 		}
