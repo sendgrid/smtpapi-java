@@ -1,10 +1,12 @@
-# SMTPAPI for Java
-
-This module will let you build SendGrid's SMTP API headers with simplicity.
-
 [![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.svg?branch=master)](https://travis-ci.org/sendgrid/smtpapi-java)
 
-## Installing
+**This module allows you to build SendGrid's SMTP API headers with simplicity.**
+
+# Announcements
+
+All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-java/blob/master/CHANGELOG.md).
+
+# Installation
 
 Choose your installation method - Maven w/ Gradle (recommended) or Jar file.
 
@@ -35,149 +37,50 @@ You can just drop the jar file in. It's a fat jar - it has all the dependencies 
 
 [smtpapi-java.jar](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-java/smtpapi-java.jar)
 
-## Examples
+## Dependencies
 
-### Create headers
+- See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/master/build.gradle#L47).
+
+# Quick Start
 
 ```java
 import com.sendgrid.smtpapi.SMTPAPI;
-SMTPAPI header = new SMTPAPI();
+
+public class Example {
+  public static void main(String[] args) {
+    SMTPAPI header = new SMTPAPI();
+    header.addTo("test@example.com");
+    String headers = header.jsonString();
+    System.out.println(headers);
+  }
+}
 ```
 
-### [To](http://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-```java
-header.addTo("email@email.com");
-// or
-header.addTo(["email@email.com"]);
-// or
-header.setTos(["email@email.com"]);
+# Usage
 
-String[] tos = header.getTos();
-```
+- [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
+- [Example Code](https://github.com/sendgrid/smtpapi-java/tree/master/examples)
 
-### [Substitutions](http://sendgrid.com/docs/API_Reference/SMTP_API/substitution_tags.html)
+## Roadmap
 
-```java
-header.addSubstitution("key", "value");
+If you are intersted in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-java/milestones). We would love to hear your feedback.
 
-JSONObject subs = header.getSubstitutions();
-```
+## How to Contribute
 
-### [Unique Arguments](http://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html)
+We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md) guide for details.
 
-```java
-header.addUniqueAarg("key", "value");
-// or
-Map map = new HashMap<String, String>();
-map.put("unique", "value");
-header.setUniqueArgs(map);
-// or
-JSONObject map = new JSONObject();
-map.put("unique", "value");
-header.setUniqueArgs(map);
+Quick links:
 
-JSONObject args = header.getUniqueArgs();
-```
-### [Categories](http://sendgrid.com/docs/API_Reference/SMTP_API/categories.html)
+- [Feature Request](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#feature_request)
+- [Bug Reports](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#submit_a_bug_report)
+- [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#cla)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
 
-```java
-header.addCategory("category");
-// or
-header.addCategory(["categories"]);
-// or
-header.setCategories(["category1", "category2"]);
+# About
 
-String[] cats = header.getCategories();
-```
+smtpapi-java is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
 
-### [Sections](http://sendgrid.com/docs/API_Reference/SMTP_API/section_tags.html)
+smtpapi-java is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-java are trademarks of SendGrid, Inc.
 
-```java
-header.addSection("key", "section");
-// or
-Map newSec = new HashMap();
-newSec.put("-section-", "value");
-header.setSections(newSec);
-// or
-JSONObject newSec = new JSONObject();
-newSec.put("-section-", "value");
-header.setSections(newSec);
-
-JSONObject sections = header.getSections();
-```
-
-### [Filters](http://sendgrid.com/docs/API_Reference/SMTP_API/apps.html)
-
-```java
-header.addFilter("filter", "setting", "value");
-header.addFilter("filter", "setting", 1);
-
-JSONObject filters = header.getFilters();
-```
-
-### [ASM Group Id](https://sendgrid.com/docs/User_Guide/advanced_suppression_manager.html)
-
-```java
-header.setASMGroupId(1);
-
-Integer groupId = header.getASMGroupId();
-```
-
-### [Scheduling](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
-
-```java
-header.setSendAt(1416427645)
-
-int sendAt = header.getSendAt();
-```
-
-### Get Headers
-
-```java
-String headers = header.jsonString();
-```
-
-If you need the unescaped JSON string.
-```java
-String rawJson = header.rawJsonString();
-```
-
-## Running Tests
-
-```
-./gradlew check
-```
-
-## Publishing to Maven
-
-This only works if you have the correct permissions - for admins only basically.
-
-```
-cp gradle.properties.example gradle.properties
-```
-
-Edit the contents of gradle.properties with your credentials.
-
-```
-./gradlew
-./gradlew uploadArchives
-```
-
-Login to [Sonatype](https://oss.sonatype.org/index.html#stagingRepositories).
-
-Go to [staging repositories page](https://oss.sonatype.org/index.html#stagingRepositories).
-
-Click 'Close' with the archive selected.
-
-![](https://raw.githubusercontent.com/sendgrid/sendgrid-java/master/maven-help.png)
-
-Wait a few minutes, and refresh the staging repositories page.
-
-Check the box for the SendGrid repo again and this time click 'Release'.
-
-You're all done.
-
-[Further help](https://github.com/sendgrid/sendgrid-java/pull/15).
-
-
-## MIT
+![SendGrid Logo]
+(https://assets3.sendgrid.com/mkt/assets/logos_brands/small/sglogo_2015_blue-9c87423c2ff2ff393ebce1ab3bd018a4.png)
