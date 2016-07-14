@@ -16,10 +16,10 @@ env:
 notifications:
   hipchat:
     rooms:
-      secure: jgx6EuyLO2FhvzwDtNyoErgw92SJucUK4O2LOpku4y4QpWAx/t25caaQf3prr6MZ2dHCL7dIDVc6QsXjMXOg/ciQEEUruUFrsMms+8+jsFba/dlybSTjbgespPSOxDc2x3cr38bcQ3xSjznkqC4gvfR12e/R/V0ZX3akrpaEkPk=
+      secure: ko9f34ZvoDhf685wpxViPnWuNzaUYcQ3CBwdIsYWzGASMtdRY9X9pJWGwo/IfZIYoxrOFtCRWQEl9O0vq/DglB7T/uXsTyCvJurVg2d/Q5JLEgG1LQnW2vQGEeLbahiW9F/IT3htsfs+ZXRavKM2Bbokx1f9CLokehL+p0Z9xus=
     template:
     - '<a href="https://travis-ci.org/%{repository}/builds/%{build_id}">%{repository}
       Build %{build_number}</a> on branch <i>%{branch}</i> by %{author}: <strong>%{message}</strong>
-      <a href="https://github.com/sendgrid/docs/commits/%{commit}">View on GitHub</a>'
+      <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
     format: html
     notify: true
