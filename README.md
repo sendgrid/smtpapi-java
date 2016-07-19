@@ -8,9 +8,16 @@ All updates to this module is documented in our [CHANGELOG](https://github.com/s
 
 # Installation
 
+## Prerequisites
+
+- Java version Oracle JDK 7, 8 or OpenJDK 7
+- The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-java)
+
+## Install Package
+
 Choose your installation method - Maven w/ Gradle (recommended) or Jar file.
 
-### Maven w/ Gradle
+### Install Maven w/ Gradle
 
 ```groovy
 ...
@@ -31,7 +38,7 @@ Then import the library - in the file appropriate to your Java project.
 import com.sendgrid.smtpapi.SMTPAPI;
 ```
 
-### Jar file
+### Insatll with Jar File
 
 You can just drop the jar file in. It's a fat jar - it has all the dependencies built in.
 

@@ -64,7 +64,7 @@ We welcome direct contributions to the smtpapi-java code base. Thank you!
 
 ##### Prerequisites #####
 
-- Java 1.7 or above
+- Java version Oracle JDK 7, 8 or OpenJDK 7
 - See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/master/build.gradle) for dependencies.
 
 ##### Initial setup: #####
