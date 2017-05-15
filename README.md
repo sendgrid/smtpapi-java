@@ -38,7 +38,7 @@ Then import the library - in the file appropriate to your Java project.
 import com.sendgrid.smtpapi.SMTPAPI;
 ```
 
-### Insatll with Jar File
+### Install with Jar File
 
 You can just drop the jar file in. It's a fat jar - it has all the dependencies built in.
 
@@ -70,7 +70,7 @@ public class Example {
 
 ## Roadmap
 
-If you are intersted in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-java/milestones). We would love to hear your feedback.
+If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-java/milestones). We would love to hear your feedback.
 
 ## How to Contribute
 
