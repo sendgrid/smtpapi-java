@@ -4,6 +4,8 @@
 
 # Announcements
 
+TESTING new CLA Process
+
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-java/blob/master/CHANGELOG.md).
 
 # Installation
