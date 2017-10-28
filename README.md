@@ -60,15 +60,8 @@ You can just drop the jar file in. It's a fat jar - it has all the dependencies 
 
 [smtpapi-java.jar](https://sendgrid-open-source.s3.amazonaws.com/smtpapi-java/smtpapi-java.jar)
 
-## Setup Environment Variables
 
-### Initial Setup
-
-```bash
-cp .env_sample .env
-```
-
-### Environment Variable
+## Environment Variable
 
 Update the development environment with your [SENDGRID_API_KEY](https://app.sendgrid.com/settings/api_keys), for example:
 
