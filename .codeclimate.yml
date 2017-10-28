@@ -1,0 +1,19 @@
+---
+engines:
+  checkstyle:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - php
+  fixme:
+    enabled: true
+  phpmd:
+    enabled: true
+  pmd:
+    enabled: true
+ratings:
+  paths:
+  - "**.java"
+  - "**.php"
