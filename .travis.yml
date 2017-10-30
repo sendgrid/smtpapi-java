@@ -1,9 +1,12 @@
 language: java
 sudo: false
-jdk:
-- oraclejdk8
-- oraclejdk7
-- openjdk7
+matrix:
+  include:
+    - os: linux
+      dist: precise
+      jdk: openjdk7
+    - os: linux
+      jdk: oraclejdk8
 after_script:
 - "./gradlew build"
 - "./scripts/s3upload.sh"
@@ -23,3 +26,8 @@ notifications:
       <a href="https://github.com/%{repository}/commits/%{commit}">View on GitHub</a>'
     format: html
     notify: true
+before_install:
+  - cat /etc/hosts # optionally check the content *before*
+  - sudo hostname "$(hostname | cut -c1-63)"
+  - sed -e "s/^\\(127\\.0\\.0\\.1.*\\)/\\1 $(hostname | cut -c1-63)/" /etc/hosts | sudo tee /etc/hosts
+  - cat /etc/hosts # optionally check the content *after*
