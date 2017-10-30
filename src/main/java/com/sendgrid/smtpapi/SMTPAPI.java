@@ -7,6 +7,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONException;
 
+import com.sendgrid.smtpapi.helpers.Helpers;
+
 public class SMTPAPI {
 
   private static final String VERSION = "1.2.0";
@@ -23,14 +25,6 @@ public class SMTPAPI {
 
   public String getVersion() {
     return VERSION;
-  }
-
-  private static String[] toArray(JSONArray json) {
-    ArrayList<String> parse = new ArrayList<String>();
-    for (int i = 0; i < json.length(); i++) {
-      parse.add(json.getString(i));
-    }
-    return parse.toArray(new String[parse.size()]);
   }
 
   public SMTPAPI addTo(String to) throws JSONException {
@@ -54,7 +48,7 @@ public class SMTPAPI {
   }
 
   public String[] getTos() throws JSONException {
-    return SMTPAPI.toArray(this.header.getJSONArray("to"));
+    return Helpers.toArray(this.header.getJSONArray("to"));
   }
 
   public SMTPAPI addSubstitution(String key, String val) throws JSONException {
@@ -128,7 +122,7 @@ public class SMTPAPI {
   }
 
   public String[] getCategories() throws JSONException {
-    return SMTPAPI.toArray(this.header.getJSONArray("category"));
+    return Helpers.toArray(this.header.getJSONArray("category"));
   }
 
   public SMTPAPI addSection(String key, String val) throws JSONException {
@@ -205,37 +199,8 @@ public class SMTPAPI {
 
   }
 
-  // convert from string to code point array
-  private int[] toCodePointArray(String input) {
-    int len = input.length();
-    int[] codePointArray = new int[input.codePointCount(0, len)];
-    for (int i = 0, j = 0; i < len; i = input.offsetByCodePoints(i, 1)) {
-      codePointArray[j++] = input.codePointAt(i);
-    }
-    return codePointArray;
-  }
-
-  private String escapeUnicode(String input) {
-    StringBuilder sb = new StringBuilder();
-    int[] codePointArray = toCodePointArray(input);
-    int len = codePointArray.length;
-    for (int i = 0; i < len; i++) {
-      if (codePointArray[i] > 65535) {
-        // surrogate pair
-        int hi = (codePointArray[i] - 0x10000) / 0x400 + 0xD800;
-        int lo = (codePointArray[i] - 0x10000) % 0x400 + 0xDC00;
-        sb.append(String.format("\\u%04x\\u%04x", hi, lo));
-      } else if (codePointArray[i] > 127) {
-        sb.append(String.format("\\u%04x",codePointArray[i]));
-      } else {
-        sb.append(String.format("%c", codePointArray[i]));
-      }
-    }
-    return sb.toString();
-  }
-
   public String jsonString() {
-    return escapeUnicode(this.header.toString());
+    return Helpers.escapeUnicode(this.header.toString());
   }
 
   public String rawJsonString() {
