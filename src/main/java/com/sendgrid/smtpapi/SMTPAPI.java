@@ -1,11 +1,12 @@
 package com.sendgrid.smtpapi;
 
-import java.util.Map;
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+import java.util.Map;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.json.JSONException;
+import org.json.JSONObject;
+
 
 public class SMTPAPI {
 
