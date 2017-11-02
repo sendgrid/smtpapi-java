@@ -160,10 +160,12 @@ public class SMTPAPITest {
     final Pattern p = Pattern.compile("Copyright\\s\\(c\\) \\d+-(\\d+)");
     Matcher m = p.matcher(copyRightLine);
 
-    if (m.find()) {
+    if (m.find())
+    {
       int actualYear = Integer.valueOf(m.group(1));
       Assert.assertEquals(expectedYear, actualYear);
-    } else {
+    } 
+    else {
       Assert.fail("Data range pattern not found. Test is invalid.");
     }
   }
