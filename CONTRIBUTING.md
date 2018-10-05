@@ -51,7 +51,7 @@ Before you decide to create a new issue, please try the following:
 
 ### Please use our Bug Report Template
 
-In order to make the process easier, we've included a [sample bug report template](https://github.com/sendgrid/smtpapi-java/blob/master/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/TryGhost/Ghost/)). The template uses [GitHub flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
+In order to make the process easier, we've included a [sample bug report template](https://github.com/sendgrid/smtpapi-java/blob/master/.github/ISSUE_TEMPLATE) (borrowed from [Ghost](https://github.com/TryGhost/Ghost/)). The template uses [GitHub-flavored markdown](https://help.github.com/articles/github-flavored-markdown/) for formatting.
 
 <a name="improvements-to-the-codebase"></a>
 ## Improvements to the Codebase
@@ -145,7 +145,7 @@ Please run your code through:
    git pull upstream <dev-branch>
    ```
 
-3. Create a new topic branch (off the main project development branch) to
+3. Create a new topic branch (of the main project development branch) to
    contain your feature, change, or fix:
 
    ```bash
