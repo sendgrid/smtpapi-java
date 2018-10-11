@@ -82,12 +82,17 @@ source ./sendgrid.env
 import com.sendgrid.smtpapi.SMTPAPI;
 
 public class Example {
+
   public static void main(String[] args) {
+  
     SMTPAPI head = new SMTPAPI();
     head.addTo("test@example.com");
+    
     String heads = header.jsonString();
     System.out.println(heads);
+    
   }
+  
 }
 ```
 
