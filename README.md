@@ -83,10 +83,10 @@ import com.sendgrid.smtpapi.SMTPAPI;
 
 public class Example {
   public static void main(String[] args) {
-    SMTPAPI header = new SMTPAPI();
-    header.addTo("test@example.com");
-    String headers = header.jsonString();
-    System.out.println(headers);
+    SMTPAPI head = new SMTPAPI();
+    head.addTo("test@example.com");
+    String heads = header.jsonString();
+    System.out.println(heads);
   }
 }
 ```
