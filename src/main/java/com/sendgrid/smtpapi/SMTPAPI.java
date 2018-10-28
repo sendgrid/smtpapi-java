@@ -50,7 +50,7 @@ public class SMTPAPI {
    * This function is used in the addTos function
    * @param to: the String received
    * @return type SMTPAPI
-   * @throws JSONException 
+   * @throws JSONException throws an exception 
    */
   public SMTPAPI addTo(String to) throws JSONException {
     if (!this.header.has("to")) {
@@ -65,7 +65,7 @@ public class SMTPAPI {
    * function addTo
    * @param to
    * @return
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addTos(String[] to) throws JSONException {
     for(int i = 0; i < to.length; i ++) {
@@ -78,7 +78,7 @@ public class SMTPAPI {
    * This function puts the String to associated with the JSONArray.
    * @param to
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setTos(String[] to) throws JSONException {
     this.header.put("to", new JSONArray(to));
@@ -88,7 +88,7 @@ public class SMTPAPI {
   /**
    * Returns the array version of JSONArray.
    * @return toArray of header's JSONArray of "to"
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public String[] getTos() throws JSONException {
     return SMTPAPI.toArray(this.header.getJSONArray("to"));
@@ -100,7 +100,7 @@ public class SMTPAPI {
    * @param key: the key that will be added
    * @param val: the value that will be added
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addSubstitution(String key, String val) throws JSONException {
     if (this.header.isNull("sub")) {
@@ -119,7 +119,7 @@ public class SMTPAPI {
    * @param key: the key that will be used in addSubstitution
    * @param val: the value that will be used in addSubstitution
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addSubstitutions(String key, String[] val) throws JSONException {
     for (int i = 0; i < val.length; i++) {
@@ -132,7 +132,7 @@ public class SMTPAPI {
    * Sets the substitutions by receiving a JSONObject
    * @param subs: the value that is added
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setSubstitutions(JSONObject subs) throws JSONException {
     this.header.put("sub", subs);
@@ -142,7 +142,7 @@ public class SMTPAPI {
   /**
    * This function returns the substitutions.
    * @return header's value from key "sub"
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public JSONObject getSubstitutions() throws JSONException {
     return this.header.getJSONObject("sub");
@@ -153,7 +153,7 @@ public class SMTPAPI {
    * @param key:The key to insert into map
    * @param val: The value to insert into map
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addUniqueArg(String key, String val) throws JSONException {
     if (this.header.isNull("unique_args")) {
@@ -166,9 +166,9 @@ public class SMTPAPI {
   /**
    * This functions receives a map consisting of String keys and String values.
    * Then this is put into the header.
-   * @param args: the map of type <String, String>
+   * @param args: the map of type Strings
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setUniqueArgs(Map<String, String> args) throws JSONException {
     this.header.put("unique_args", args);
@@ -179,7 +179,7 @@ public class SMTPAPI {
    * This functions allows unique arguments to be set.
    * @param args: the JSONObject to be manipulated
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setUniqueArgs(JSONObject args) throws JSONException {
     this.header.put("unique_args", args);
@@ -189,7 +189,7 @@ public class SMTPAPI {
   /**
    * Get the unique arguments from the JSON.
    * @return unique args from JSON
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public JSONObject getUniqueArgs() throws JSONException {
     return this.header.getJSONObject("unique_args");
@@ -199,7 +199,7 @@ public class SMTPAPI {
    * Adds a category if it doesn't already have one.
    * @param val: the value to add a category to
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addCategory(String val) throws JSONException {
     if (!this.header.has("category")) {
@@ -213,7 +213,7 @@ public class SMTPAPI {
    * Add categories by iterating through the vals array.
    * @param vals: the array that contains entities that categories will be added to
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addCategories(String[] vals) throws JSONException {
     for (int i = 0; i < vals.length; i++) {
@@ -226,7 +226,7 @@ public class SMTPAPI {
    * This function sets categories into the JSON.
    * @param cat: the array of categories consisting of type String
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setCategories(String[] cat) throws JSONException {
     this.header.put("category", cat);
@@ -236,7 +236,7 @@ public class SMTPAPI {
   /**
    * This function returns the categories
    * @return array of strings 
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public String[] getCategories() throws JSONException {
     return SMTPAPI.toArray(this.header.getJSONArray("category"));
@@ -247,7 +247,7 @@ public class SMTPAPI {
    * @param key: the key to insert into the JSONObject
    * @param val: the val to insert into the JSONObject
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addSection(String key, String val) throws JSONException {
     if (this.header.isNull("section")) {
@@ -261,7 +261,7 @@ public class SMTPAPI {
    * Returns setSections of the new JSONObject
    * @param sec: the map of String keys and String values
    * @return setSections of the new JSONObject
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setSections(Map<String, String> sec) throws JSONException {
     return this.setSections(new JSONObject(sec));
@@ -272,7 +272,7 @@ public class SMTPAPI {
    * Sets sections with the parameter of a JSONObject called sec
    * @param sec: JSONObject received
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setSections(JSONObject sec) throws JSONException {
     this.header.put("section", sec);
@@ -282,7 +282,7 @@ public class SMTPAPI {
   /**
    * Returns the JSONObject for "section"
    * @return JSONObject
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public JSONObject getSections() throws JSONException {
     return this.header.getJSONObject("section");
@@ -295,7 +295,7 @@ public class SMTPAPI {
    * @param setting: type String, acts as the key when adding to map
    * @param val: type String, acts as the value when adding to map
    * @return current object instance 
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addFilter(String filter, String setting, String val) throws JSONException {
     if (this.header.isNull("filters")) {
@@ -315,7 +315,7 @@ public class SMTPAPI {
    * @param setting: type String, acts as the key when adding to map
    * @param val: type String, acts as the value when adding to map
    * @return current object instance of type SMTPAPI
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI addFilter(String filter, String setting, int val) throws JSONException {
     if (this.header.isNull("filters")) {
@@ -333,7 +333,7 @@ public class SMTPAPI {
    * Allows filters to be set based on JSONObject received.
    * @param filters: paramter received that acts as the value to insert
    * @return current object instance of type SMTPAPI
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setFilters(JSONObject filters) throws JSONException {
     this.header.put("filters", filters);
@@ -343,7 +343,7 @@ public class SMTPAPI {
   /**
    * Returns the filters by calling getJSONObject method.
    * @return filters with type JSONObject
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public JSONObject getFilters() throws JSONException {
     return this.header.getJSONObject("filters");
@@ -353,7 +353,7 @@ public class SMTPAPI {
    * Sets the ASMGroupID to the val received
    * @param val: the ASMGroupID is set to this
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setASMGroupId(int val) throws JSONException{
     this.header.put("asm_group_id", val);
@@ -364,7 +364,7 @@ public class SMTPAPI {
    * Returns the ASMGroupID by first checking if header has the "asm_group_id".
    * If it doesn't have it, return null.
    * @return the ASMGroupID
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public Integer getASMGroupId() throws JSONException{
     return this.header.has("asm_group_id") ? this.header.optInt("asm_group_id") : null;
@@ -374,7 +374,7 @@ public class SMTPAPI {
    * Sets the sendAt to the integer received.
    * @param sendAt: the sendAt is set to this
    * @return current object instance
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public SMTPAPI setSendAt(int sendAt) throws JSONException {
     this.header.put("send_at", sendAt);
@@ -384,7 +384,7 @@ public class SMTPAPI {
   /**
    * Returns the sendAt.
    * @return sendAt of type int
-   * @throws JSONException
+   * @throws JSONException throws an exception
    */
   public int getSendAt() throws JSONException {
     return this.header.getInt("send_at");
