@@ -153,7 +153,7 @@ public class SMTPAPITest {
 
   @Test public void testCopyrightDateRange() throws JSONException {
     int expectedYear = Calendar.getInstance().get(Calendar.YEAR);
-    String copyRightLine = getCopyrightDateRangeLine("LICENSE.txt");
+    String copyRightLine = getCopyrightDateRangeLine("LICENSE.md");
 
     if (copyRightLine == null || copyRightLine.isEmpty()) Assert.fail("Check your Copyright File");
 
