@@ -8,16 +8,6 @@ import static org.junit.Assert.assertEquals;
 
 public class ProjectTest {
 
-    // ,/Docker or docker/Docker
-    @Test public void checkDockerExists() {
-        assertEquals(true, Files.isDirectory(Paths.get("./Docker")));
-    }
-
-    // ./docker-compose.yml or ./docker/docker-compose.yml
-    @Test public void checkDockerComposeExists() {
-        assertEquals(true, new File("./docker-compose.yml").exists());
-    }
-
     // ./.env_sample
     @Test public void checkEnvSampleExists() {
         assertEquals(true, new File("./.env_sample").exists());
@@ -78,13 +68,4 @@ public class ProjectTest {
         assertEquals(true, new File("./TROUBLESHOOTING.md").exists());
     }
 
-    // ./USAGE.md
-    @Test public void checkUsageGuideExists() {
-        assertEquals(true, new File("./USAGE.md").exists());
-    }
-
-    // ./USE_CASES.md
-    @Test public void checkUseCases() {
-        assertEquals(true, new File("./USE_CASES.md").exists());
-    }
 }
