@@ -43,9 +43,9 @@ public class ProjectTest {
         assertEquals(true, new File("./CONTRIBUTING.md").exists());
     }
 
-    // ./.github/ISSUE_TEMPLATE
+    // ./ISSUE_TEMPLATE.md
     @Test public void checkIssuesTemplateExists() {
-        assertEquals(true, new File("./.github/ISSUE_TEMPLATE").exists());
+        assertEquals(true, new File("./ISSUE_TEMPLATE.md").exists());
     }
 
     // ./LICENSE.md
@@ -53,9 +53,9 @@ public class ProjectTest {
         assertEquals(true, new File("./LICENSE.md").exists());
     }
 
-    // ./.github/PULL_REQUEST_TEMPLATE
+    // ./PULL_REQUEST_TEMPLATE.md
     @Test public void checkPullRequestExists() {
-        assertEquals(true, new File("./.github/PULL_REQUEST_TEMPLATE").exists());
+        assertEquals(true, new File("./PULL_REQUEST_TEMPLATE.md").exists());
     }
 
     // ./README.md
