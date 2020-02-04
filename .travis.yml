@@ -1,5 +1,7 @@
 language: java
 sudo: false
+before_install:
+  - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import || true
 matrix:
   include:
     - name: 'OpenJDK 7'
