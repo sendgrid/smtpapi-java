@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-02-05] Version 1.2.2
+--------------------------
+**Library - Docs**
+- [PR #106](https://github.com/sendgrid/smtpapi-java/pull/106): baseline all the templated markdown docs. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-02-01] Version 1.2.1
 --------------------------
 **Library - Docs**
