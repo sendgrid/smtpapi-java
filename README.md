@@ -114,7 +114,8 @@ Quick links:
 - [Feature Request](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#feature-request)
 - [Bug Reports](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#submit-a-bug-report)
 - [Sign the CLA to Create a Pull Request](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#cla)
-- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#improvements-to-the-codebase)
+- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
+- [Review Pull Requests](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About
@@ -125,4 +126,4 @@ smtpapi-java is maintained and funded by SendGrid, Inc. The names and logos for 
 
 <a name="license"></a>
 # License
-[The MIT License (MIT)](LICENSE.txt)
+[The MIT License (MIT)](LICENSE.md)
