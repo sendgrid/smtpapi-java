@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-02-19] Version 1.2.3
+--------------------------
+**Library - Docs**
+- [PR #76](https://github.com/sendgrid/smtpapi-java/pull/76): Added Code Review to Contributing.md. Thanks to [@mptap](https://github.com/mptap)!
+
+**Library - Fix**
+- [PR #105](https://github.com/sendgrid/smtpapi-java/pull/105): release instructions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+
+
 [2020-02-05] Version 1.2.2
 --------------------------
 **Library - Docs**
