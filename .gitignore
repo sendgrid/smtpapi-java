@@ -8,3 +8,6 @@ out
 .DS_Store
 gradle.properties
 repo
+.env
+target/
+smtpapi-java.jar

@@ -10,10 +10,10 @@ import org.junit.Before;
 
 import static org.junit.Assert.*;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SMTPAPITest {
 
@@ -53,18 +53,18 @@ public class SMTPAPITest {
 
   @Test public void testAddTo() throws JSONException {
     test.addTo("john@doe.com");
-    String[] expected = new String[] {"john@doe.com"};
+    String[] expected = new String[]{"john@doe.com"};
     Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testAddTos() throws JSONException {
-    String[] expected = new String[] {"john@doe.com"};
+    String[] expected = new String[]{"john@doe.com"};
     test.addTos(expected);
     Assert.assertArrayEquals(expected, test.getTos());
   }
 
   @Test public void testSetTos() throws JSONException {
-    String[] expected = new String[] {"john@doe.com", "doe@john.com"};
+    String[] expected = new String[]{"john@doe.com", "doe@john.com"};
     test.setTos(expected);
     Assert.assertArrayEquals(expected, test.getTos());
   }
@@ -151,4 +151,49 @@ public class SMTPAPITest {
     Assert.assertEquals(expected, test.getSendAt());
   }
 
+  @Test public void testCopyrightDateRange() throws JSONException {
+    int expectedYear = Calendar.getInstance().get(Calendar.YEAR);
+    String copyRightLine = getCopyrightDateRangeLine("LICENSE.md");
+
+    if (copyRightLine == null || copyRightLine.isEmpty()) Assert.fail("Check your Copyright File");
+
+    final Pattern p = Pattern.compile("Copyright\\s\\(C\\) (\\d+)");
+    Matcher m = p.matcher(copyRightLine);
+
+    if (m.find()) {
+      int actualYear = Integer.valueOf(m.group(1));
+      Assert.assertEquals(expectedYear, actualYear);
+    } else {
+      Assert.fail("Data range pattern not found. Test is invalid.");
+    }
+  }
+
+  private String getCopyrightDateRangeLine(String licenseFilePath) {
+    File file = new File(licenseFilePath);
+    BufferedReader reader = null;
+    String copyRightLine = "";
+
+    try {
+      reader = new BufferedReader(new FileReader(file));
+
+      while ((copyRightLine = reader.readLine()) != null) {
+        if (copyRightLine.contains("Copyright (C)")) { // do no more work once we find line of interest
+          break;
+        }
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    finally {
+      try {
+        if (reader != null) {
+          reader.close();
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
+    return copyRightLine;
+  }
 }
