@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-03-04] Version 1.2.4
+--------------------------
+**Library - Chore**
+- [PR #107](https://github.com/sendgrid/smtpapi-java/pull/107): fix JDK Travis failures. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+
+
 [2020-02-19] Version 1.2.3
 --------------------------
 **Library - Docs**
