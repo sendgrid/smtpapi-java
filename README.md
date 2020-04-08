@@ -12,8 +12,6 @@
 
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-java/blob/master/CHANGELOG.md).
 
-If you're a software engineer who is passionate about #DeveloperExperience and/or #OpenSource, [this is an incredible opportunity to join our #DX team](https://sendgrid.com/careers/role/1421152/?gh_jid=1421152) as a Developer Experience Engineer and work with **@thinkingserious** and **@aroach**! Tell your friends :)
-
 # Table of Contents
 - [Installation](#installation)
 - [Quick Start](#quick-start)
@@ -120,9 +118,11 @@ Quick links:
 <a name="about"></a>
 # About
 
-smtpapi-java is guided and supported by the SendGrid [Developer Experience Team](mailto:dx@sendgrid.com).
+smtpapi-java is maintained and funded by Twilio SendGrid, Inc. The names and logos for smtpapi-java are trademarks of Twilio SendGrid, Inc.
 
-smtpapi-java is maintained and funded by SendGrid, Inc. The names and logos for smtpapi-java are trademarks of SendGrid, Inc.
+If you need help installing or using the library, please check the [Twilio SendGrid Support Help Center](https://support.sendgrid.com).
+
+If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
 <a name="license"></a>
 # License
