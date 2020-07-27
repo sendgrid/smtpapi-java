@@ -9,6 +9,7 @@
 **This module allows you to build SendGrid's SMTP API headers with simplicity.**
 
 # Announcements
+**The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
 All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-java/blob/master/CHANGELOG.md).
 
