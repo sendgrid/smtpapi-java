@@ -20,6 +20,8 @@ matrix:
     - jdk: oraclejdk7
 install:
   - mvn --settings .maven.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 deploy:
   - provider: script
     script: mvn clean deploy --settings .maven.xml -DskipTests=true -B -U -Prelease
