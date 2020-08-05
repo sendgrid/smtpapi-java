@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
   <name>SMTPAPI Java</name>
   <description>SMTPAPI Java helper library</description>
-  <version>1.2.4</version>
+  <version>1.2.5</version>
   <url>https://github.com/sendgrid/smtapi-java</url>
   <licenses>
     <license>
@@ -24,7 +24,7 @@
     <url>scm:git@github.com:sendgrid/smtpapi-java.git</url>
     <connection>scm:git@github.com:sendgrid/smtpapi-java.git</connection>
     <developerConnection>scm:git@github.com:sendgrid/smtpapi-java.git</developerConnection>
-    <tag>1.2.4</tag>
+    <tag>1.2.5</tag>
   </scm>
   <profiles>
     <profile>
@@ -131,7 +131,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit-dep</artifactId>
-      <version>4.10</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -148,7 +148,7 @@
     <dependency>
       <groupId>org.skyscreamer</groupId>
       <artifactId>jsonassert</artifactId>
-      <version>1.2.3</version>
+      <version>1.5.0</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
