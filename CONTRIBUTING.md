@@ -50,7 +50,7 @@ We welcome direct contributions to the smtpapi-java code base. Thank you!
 ##### Prerequisites #####
 
 - Java version Oracle JDK 7, 8 or OpenJDK 7
-- See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/master/build.gradle) for dependencies.
+- See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/HEAD/build.gradle) for dependencies.
 
 ##### Initial setup: #####
 
@@ -62,7 +62,7 @@ cd smtpapi-java
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-java/tree/master/examples) to get started quickly.
+See the [examples folder](https://github.com/sendgrid/smtpapi-java/tree/HEAD/examples) to get started quickly.
 
 ```bash
 cd examples
@@ -89,9 +89,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`/src/test/java/com/sendgrid/smtpapi/`](https://github.com/sendgrid/smtpapi-java/tree/master/src/test/java/com/sendgrid/smtpapi/) directory.
+All test files are in the [`/src/test/java/com/sendgrid/smtpapi/`](https://github.com/sendgrid/smtpapi-java/tree/HEAD/src/test/java/com/sendgrid/smtpapi/) directory.
 
-For the purposes of contributing to this repo, please update the [`SMTPAPITest.java`](https://github.com/sendgrid/smtpapi-java/blob/master/src/test/java/com/sendgrid/smtpapi/SMTPAPITest.java) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`SMTPAPITest.java`](https://github.com/sendgrid/smtpapi-java/blob/HEAD/src/test/java/com/sendgrid/smtpapi/SMTPAPITest.java) file with unit tests as you modify the code.
 
 To run the tests:
 
@@ -150,7 +150,7 @@ Please run your code through:
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream main
    ```
 
 6. Push your topic branch up to your fork:
@@ -160,7 +160,7 @@ Please run your code through:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `master` branch. All tests must be passing before we will review the PR.
+    with a clear title and description against the `main` branch. All tests must be passing before we will review the PR.
 
 <a name="code-reviews"></a>
 ## Code Reviews
