@@ -50,7 +50,7 @@ We welcome direct contributions to the smtpapi-java code base. Thank you!
 ##### Prerequisites #####
 
 - Java version Oracle JDK 7, 8 or OpenJDK 7
-- See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/HEAD/build.gradle) for dependencies.
+- See [build.gradle](build.gradle) for dependencies.
 
 ##### Initial setup: #####
 
@@ -62,7 +62,7 @@ cd smtpapi-java
 
 ##### Execute: #####
 
-See the [examples folder](https://github.com/sendgrid/smtpapi-java/tree/HEAD/examples) to get started quickly.
+See the [examples folder](examples) to get started quickly.
 
 ```bash
 cd examples
@@ -89,9 +89,9 @@ Source code.
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in the [`/src/test/java/com/sendgrid/smtpapi/`](https://github.com/sendgrid/smtpapi-java/tree/HEAD/src/test/java/com/sendgrid/smtpapi/) directory.
+All test files are in the [`/src/test/java/com/sendgrid/smtpapi/`](src/test/java/com/sendgrid/smtpapi/) directory.
 
-For the purposes of contributing to this repo, please update the [`SMTPAPITest.java`](https://github.com/sendgrid/smtpapi-java/blob/HEAD/src/test/java/com/sendgrid/smtpapi/SMTPAPITest.java) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`SMTPAPITest.java`](src/test/java/com/sendgrid/smtpapi/SMTPAPITest.java) file with unit tests as you modify the code.
 
 To run the tests:
 
