@@ -50,7 +50,7 @@ We welcome direct contributions to the smtpapi-java code base. Thank you!
 ##### Prerequisites #####
 
 - Java version Oracle JDK 7, 8 or OpenJDK 7
-- See [build.gradle](build.gradle) for dependencies.
+- See [pom.xml](pom.xml) for dependencies.
 
 ##### Initial setup: #####
 

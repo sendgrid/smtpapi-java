@@ -74,7 +74,7 @@ source ./sendgrid.env
 
 ## Dependencies
 
-- See [build.gradle](build.gradle#L47).
+- See [pom.xml](pom.xml).
 
 <a name="quick-start"></a>
 # Quick Start
