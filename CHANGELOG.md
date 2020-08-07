@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-08-05] Version 1.2.5
+--------------------------
+**Library - Test**
+- [PR #62](https://github.com/sendgrid/smtpapi-java/pull/62): Add CodeCov support to travis. Thanks to [@pushkyn](https://github.com/pushkyn)!
+
+
 [2020-03-04] Version 1.2.4
 --------------------------
 **Library - Chore**
