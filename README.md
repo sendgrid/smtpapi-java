@@ -1,6 +1,6 @@
-![SendGrid Logo](https://uiux.s3.amazonaws.com/2016-logos/email-logo%402x.png)
+![SendGrid Logo](twilio_sendgrid_logo.png)
 
-[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.svg?branch=master)](https://travis-ci.org/sendgrid/smtpapi-java)
+[![BuildStatus](https://travis-ci.org/sendgrid/smtpapi-java.svg?branch=main)](https://travis-ci.org/sendgrid/smtpapi-java)
 [![Email Notifications Badge](https://dx.sendgrid.com/badge/java)](https://dx.sendgrid.com/newsletter/java)
 [![Twitter Follow](https://img.shields.io/twitter/follow/sendgrid.svg?style=social&label=Follow)](https://twitter.com/sendgrid)
 [![GitHub contributors](https://img.shields.io/github/contributors/sendgrid/smtpapi-java.svg)](https://github.com/sendgrid/smtpapi-java/graphs/contributors)
@@ -11,7 +11,7 @@
 # Announcements
 **The default branch name for this repository has been changed to `main` as of 07/27/2020.**
 
-All updates to this module is documented in our [CHANGELOG](https://github.com/sendgrid/smtpapi-java/blob/master/CHANGELOG.md).
+All updates to this module is documented in our [CHANGELOG](CHANGELOG.md).
 
 # Table of Contents
 - [Installation](#installation)
@@ -74,7 +74,7 @@ source ./sendgrid.env
 
 ## Dependencies
 
-- See [build.gradle](https://github.com/sendgrid/smtpapi-java/blob/master/build.gradle#L47).
+- See [pom.xml](pom.xml).
 
 <a name="quick-start"></a>
 # Quick Start
@@ -96,7 +96,7 @@ public class Example {
 # Usage
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
-- [Example Code](https://github.com/sendgrid/smtpapi-java/tree/master/examples)
+- [Example Code](examples)
 
 <a name="roadmap"></a>
 # Roadmap
@@ -106,14 +106,14 @@ If you are interested in the future direction of this project, please take a loo
 <a name="contribute"></a>
 # How to Contribute
 
-We encourage contribution to our projects, please see our [CONTRIBUTING](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md) guide for details.
+We encourage contribution to our projects, please see our [CONTRIBUTING](CONTRIBUTING.md) guide for details.
 
 Quick links:
 
-- [Feature Request](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#feature-request)
-- [Bug Reports](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#submit-a-bug-report)
-- [Improvements to the Codebase](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#improvements_to_the_codebase)
-- [Review Pull Requests](https://github.com/sendgrid/smtpapi-java/blob/master/CONTRIBUTING.md#code-reviews)
+- [Feature Request](CONTRIBUTING.md#feature-request)
+- [Bug Reports](CONTRIBUTING.md#submit-a-bug-report)
+- [Improvements to the Codebase](CONTRIBUTING.md#improvements_to_the_codebase)
+- [Review Pull Requests](CONTRIBUTING.md#code-reviews)
 
 <a name="about"></a>
 # About
