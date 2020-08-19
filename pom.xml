@@ -11,7 +11,7 @@
   <packaging>jar</packaging>
   <name>SMTPAPI Java</name>
   <description>SMTPAPI Java helper library</description>
-  <version>1.2.5</version>
+  <version>1.2.6</version>
   <url>https://github.com/sendgrid/smtapi-java</url>
   <licenses>
     <license>
@@ -24,7 +24,7 @@
     <url>scm:git@github.com:sendgrid/smtpapi-java.git</url>
     <connection>scm:git@github.com:sendgrid/smtpapi-java.git</connection>
     <developerConnection>scm:git@github.com:sendgrid/smtpapi-java.git</developerConnection>
-    <tag>1.2.5</tag>
+    <tag>1.2.6</tag>
   </scm>
   <profiles>
     <profile>
