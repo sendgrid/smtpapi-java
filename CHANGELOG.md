@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-08-19] Version 1.2.6
+--------------------------
+**Library - Docs**
+- [PR #85](https://github.com/sendgrid/smtpapi-java/pull/85): ran grammarly checks through all the *.md docs. Thanks to [@aquibbaig](https://github.com/aquibbaig)!
+
+**Library - Chore**
+- [PR #108](https://github.com/sendgrid/smtpapi-java/pull/108): update GitHub branch references to use HEAD. Thanks to [@thinkingserious](https://github.com/thinkingserious)!
+
+
 [2020-08-05] Version 1.2.5
 --------------------------
 **Library - Test**
