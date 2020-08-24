@@ -17,7 +17,6 @@ All updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
-- [Roadmap](#roadmap)
 - [How to Contribute](#contribute)
 - [About](#about)
 - [License](#license)
@@ -97,11 +96,6 @@ public class Example {
 
 - [SendGrid Docs](https://sendgrid.com/docs/API_Reference/SMTP_API/index.html)
 - [Example Code](examples)
-
-<a name="roadmap"></a>
-# Roadmap
-
-If you are interested in the future direction of this project, please take a look at our [milestones](https://github.com/sendgrid/smtpapi-java/milestones). We would love to hear your feedback.
 
 <a name="contribute"></a>
 # How to Contribute
