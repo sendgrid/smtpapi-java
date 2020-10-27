@@ -48,9 +48,9 @@ public class ProjectTest {
         assertEquals(true, new File("./ISSUE_TEMPLATE.md").exists());
     }
 
-    // ./LICENSE.md
+    // ./LICENSE
     @Test public void checkLicenseExists() {
-        assertEquals(true, new File("./LICENSE.md").exists());
+        assertEquals(true, new File("./LICENSE").exists());
     }
 
     // ./PULL_REQUEST_TEMPLATE.md
