@@ -153,11 +153,11 @@ public class SMTPAPITest {
 
   @Test public void testCopyrightDateRange() throws JSONException {
     int expectedYear = Calendar.getInstance().get(Calendar.YEAR);
-    String copyRightLine = getCopyrightDateRangeLine("LICENSE.txt");
+    String copyRightLine = getCopyrightDateRangeLine("LICENSE");
 
     if (copyRightLine == null || copyRightLine.isEmpty()) Assert.fail("Check your Copyright File");
 
-    final Pattern p = Pattern.compile("Copyright\\s\\(c\\) \\d+-(\\d+)");
+    final Pattern p = Pattern.compile("Copyright\\s\\(C\\) (\\d+)");
     Matcher m = p.matcher(copyRightLine);
 
     if (m.find()) {
@@ -177,7 +177,7 @@ public class SMTPAPITest {
       reader = new BufferedReader(new FileReader(file));
 
       while ((copyRightLine = reader.readLine()) != null) {
-        if (copyRightLine.contains("Copyright (c)")) { // do no more work once we find line of interest
+        if (copyRightLine.contains("Copyright (C)")) { // do no more work once we find line of interest
           break;
         }
       }
