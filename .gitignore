@@ -9,3 +9,5 @@ out
 gradle.properties
 repo
 .env
+target/
+smtpapi-java.jar
