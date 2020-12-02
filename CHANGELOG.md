@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2020-12-02] Version 1.2.7
+--------------------------
+**Library - Chore**
+- [PR #70](https://github.com/sendgrid/smtpapi-java/pull/70): Update SMTPAPI.java. Thanks to [@gargi-gupta](https://github.com/gargi-gupta)!
+
+
 [2020-08-19] Version 1.2.6
 --------------------------
 **Library - Docs**
