@@ -1,22 +1,22 @@
 language: java
 before_install:
-  - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import --batch || true
+- echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import --batch || true
 jdk:
-  - openjdk8
-  - openjdk11
+- openjdk8
+- openjdk11
 install:
-  - mvn --settings .maven.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
+- mvn --settings .maven.xml install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true
+  -B -V
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
 deploy:
-  - provider: script
-    script: mvn clean deploy --settings .maven.xml -DskipTests=true -B -U -Prelease
-    edge: true
-    on:
-      tags: true
-      jdk: openjdk8
-      branch: main
-
+- provider: script
+  script: mvn clean deploy --settings .maven.xml -DskipTests=true -B -U -Prelease
+  edge: true
+  on:
+    tags: true
+    jdk: openjdk8
+    branch: main
 notifications:
   slack:
     if: branch = main
@@ -24,4 +24,4 @@ notifications:
     on_success: never
     on_failure: change
     rooms:
-      - secure: if4he3RF8XLr7pvQN9jJaoA+40b3PDObniux3YY7NnoRcOcV4N46hQn3i0CKpEpTT9E+gDyAuvd5NpCQW2VM4ePsfVXyY4wbWoXNpWCklKsNPk138PSa+zUZDfgyD8t7X3FHbGuZVlX3Jzu20WZikPdLYJoE6bU9TI9um57Mz8A=
+      secure: Vj3An8RbvEaZdlDY6dwJcaIz2jfyiin+BweYzLb0ynFww2l/5bFQJ4nLKRy/NgVjM4s43Oq5FxveHhqohv0HNIO62JI1h89HhnQNtLezM/6T+/is+hW9UbHAEQJwdIwv/JQFRxhDDj2VeRhCLmKyuUeGKLV+rc5ZrogjjJMLyto=
