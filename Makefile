@@ -6,6 +6,10 @@ install:
 	mvn clean install -DskipTests=true -Dgpg.skip -B
 	cp target/smtpapi-java-$(VERSION).jar smtpapi-java.jar
 
+package:
+	mvn package -DskipTests=true -Dgpg.skip -B
+	cp target/smtpapi-java-$(VERSION).jar smtpapi-java.jar
+
 test:
 	mvn test
 
