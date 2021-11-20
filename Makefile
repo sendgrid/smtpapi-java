@@ -1,4 +1,4 @@
-.PHONY: install test clean
+.PHONY: install package test clean
 
 VERSION := $(shell mvn help:evaluate -Dexpression=project.version --batch-mode | grep -e '^[^\[]')
 install:
