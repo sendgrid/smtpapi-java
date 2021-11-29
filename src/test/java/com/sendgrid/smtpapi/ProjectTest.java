@@ -18,16 +18,6 @@ public class ProjectTest {
         assertEquals(true, new File("./.gitignore").exists());
     }
 
-    // ./.travis.yml
-    @Test public void checkTravisExists() {
-        assertEquals(true, new File("./.travis.yml").exists());
-    }
-
-    // ./.codeclimate.yml
-    @Test public void checkCodeClimateExists() {
-        assertEquals(true, new File("./.codeclimate.yml").exists());
-    }
-
     // ./CHANGELOG.md
     @Test public void checkChangelogExists() {
         assertEquals(true, new File("./CHANGELOG.md").exists());
