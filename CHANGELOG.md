@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2021-12-01] Version 1.2.8
+--------------------------
+**Library - Chore**
+- [PR #110](https://github.com/sendgrid/smtpapi-java/pull/110): fix pom for release. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+- [PR #109](https://github.com/sendgrid/smtpapi-java/pull/109): migrate to github actions. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+
+
 [2020-12-02] Version 1.2.7
 --------------------------
 **Library - Chore**
