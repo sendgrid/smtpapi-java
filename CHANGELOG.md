@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-01-12] Version 1.2.9
+--------------------------
+**Library - Chore**
+- [PR #111](https://github.com/sendgrid/smtpapi-java/pull/111): update license year. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+
+
 [2021-12-01] Version 1.2.8
 --------------------------
 **Library - Chore**
