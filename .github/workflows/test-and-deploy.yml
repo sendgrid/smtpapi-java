@@ -29,7 +29,7 @@ jobs:
           java-version: ${{ matrix.java }}
           cache: 'maven'
 
-      - name: Instal Dependencies
+      - name: Install Dependencies
         run: mvn install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
 
       - name: Run Unit Tests
@@ -56,7 +56,15 @@ jobs:
           gpg-passphrase: GPG_PASSPHRASE
 
       - name: Install Dependencies
-        run: mvn install -DskipTests=true -Dgpg.skip -Dmaven.javadoc.skip=true -B -V
+        run: make install
+
+      - name: Create GitHub Release
+        uses: sendgrid/dx-automator/actions/release@main
+        with:
+          assets: smtpapi-java.jar
+          footer: '**[Maven](https://mvnrepository.com/artifact/com.sendgrid/smtpapi-java/${version})**'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to Maven
         env:
