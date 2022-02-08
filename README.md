@@ -25,7 +25,7 @@ All updates to this module are documented in our [CHANGELOG](CHANGELOG.md).
 
 ## Prerequisites
 
-- Java 8 or 11
+- Java 8, 11, or 17
 - The SendGrid service, starting at the [free level](https://sendgrid.com/free?source=smtpapi-java)
 
 ## Install Package
