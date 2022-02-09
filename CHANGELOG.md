@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-02-09] Version 1.2.10
+---------------------------
+**Library - Chore**
+- [PR #114](https://github.com/sendgrid/smtpapi-java/pull/114): upgrade supported language versions. Thanks to [@childish-sambino](https://github.com/childish-sambino)!
+- [PR #113](https://github.com/sendgrid/smtpapi-java/pull/113): add gh release to workflow. Thanks to [@shwetha-manvinkurke](https://github.com/shwetha-manvinkurke)!
+- [PR #112](https://github.com/sendgrid/smtpapi-java/pull/112): merge test and release workflows. Thanks to [@Hunga1](https://github.com/Hunga1)!
+
+
 [2022-01-12] Version 1.2.9
 --------------------------
 **Library - Chore**
