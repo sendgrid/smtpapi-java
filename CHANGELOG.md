@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-03-09] Version 1.3.0
+--------------------------
+**Library - Chore**
+- [PR #116](https://github.com/sendgrid/smtpapi-java/pull/116): push Datadog Release Metric upon deploy success. Thanks to [@eshanholtz](https://github.com/eshanholtz)!
+
+**Library - Feature**
+- [PR #115](https://github.com/sendgrid/smtpapi-java/pull/115): add GH action to update dependencies. Thanks to [@JenniferMah](https://github.com/JenniferMah)!
+
+
 [2022-02-09] Version 1.2.10
 ---------------------------
 **Library - Chore**
