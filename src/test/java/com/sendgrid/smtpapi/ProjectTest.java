@@ -33,11 +33,6 @@ public class ProjectTest {
         assertEquals(true, new File("./CONTRIBUTING.md").exists());
     }
 
-    // ./ISSUE_TEMPLATE.md
-    @Test public void checkIssuesTemplateExists() {
-        assertEquals(true, new File("./ISSUE_TEMPLATE.md").exists());
-    }
-
     // ./LICENSE
     @Test public void checkLicenseExists() {
         assertEquals(true, new File("./LICENSE").exists());
