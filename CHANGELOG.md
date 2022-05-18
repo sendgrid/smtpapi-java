@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2022-05-18] Version 1.3.1
+--------------------------
+**Library - Docs**
+- [PR #118](https://github.com/sendgrid/smtpapi-java/pull/118): Modify Docs to align with SendGrid Support. Thanks to [@garethpaul](https://github.com/garethpaul)!
+
+**Library - Fix**
+- [PR #117](https://github.com/sendgrid/smtpapi-java/pull/117): override default gh token. Thanks to [@beebzz](https://github.com/beebzz)!
+
+
 [2022-03-09] Version 1.3.0
 --------------------------
 **Library - Chore**
