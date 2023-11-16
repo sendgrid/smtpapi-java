@@ -68,6 +68,9 @@ public class Example {
     // [Scheduling](https://sendgrid.com/docs/API_Reference/SMTP_API/scheduling_parameters.html)
     header.setSendAt(1416427645);
 
+    // [Per email scheduling](https://docs.sendgrid.com/for-developers/sending-email/scheduling-parameters)
+    header.addSendEachAt(1416427645);
+
     //int sendAt = header.getSendAt();
 
     // Get Headers
