@@ -1,6 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2024-04-18] Version 1.3.2
+--------------------------
+**Library - Chore**
+- [PR #124](https://github.com/sendgrid/smtpapi-java/pull/124): Update LICENSE year. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+- [PR #123](https://github.com/sendgrid/smtpapi-java/pull/123): bump org.json:json from 20140107 to 20231013. Thanks to [@dependabot](https://github.com/dependabot)!
+
+**Library - Test**
+- [PR #119](https://github.com/sendgrid/smtpapi-java/pull/119): Adding misc as PR type. Thanks to [@rakatyal](https://github.com/rakatyal)!
+
+
 [2022-05-18] Version 1.3.1
 --------------------------
 **Library - Docs**
