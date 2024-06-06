@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+[2024-06-06] Version 1.3.3
+--------------------------
+**Library - Chore**
+- [PR #125](https://github.com/sendgrid/smtpapi-java/pull/125): added Maven badge. Thanks to [@tiwarishubham635](https://github.com/tiwarishubham635)!
+
+
 [2024-04-18] Version 1.3.2
 --------------------------
 **Library - Chore**
