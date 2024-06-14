@@ -2,6 +2,7 @@ package com.sendgrid.smtpapi;
 
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -203,7 +204,23 @@ public class SMTPAPI {
 
   public int getSendAt() throws JSONException {
     return this.header.getInt("send_at");
+  }
 
+  public SMTPAPI addSendEachAt(int sendAt) throws JSONException {
+    if (!this.header.has("send_each_at")) {
+      this.header.put("send_each_at", new JSONArray());
+    }
+    this.header.accumulate("send_each_at", sendAt);
+    return this;
+  }
+
+  public List<Integer> getSendEachAt() throws JSONException {
+    JSONArray array = this.header.getJSONArray("send_each_at");
+    List<Integer> sendTimes = new ArrayList<>();
+    for (int i = 0; i < array.length(); i++) {
+      sendTimes.add(array.getInt(i));
+    }
+    return sendTimes;
   }
 
   // convert from string to code point array

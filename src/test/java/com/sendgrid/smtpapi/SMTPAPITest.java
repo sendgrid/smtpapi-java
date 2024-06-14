@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 
 import java.io.*;
 import java.util.Calendar;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -149,6 +150,14 @@ public class SMTPAPITest {
     int expected = 12345;
     test.setSendAt(expected);
     Assert.assertEquals(expected, test.getSendAt());
+  }
+
+  @Test public void testSetSendEachAt() throws JSONException {
+    int expected = 12345;
+    test.addSendEachAt(expected);
+    List<Integer> output = test.getSendEachAt();
+    Assert.assertEquals(1, output.size());
+    Assert.assertEquals(expected, test.getSendEachAt().get(0), 0);
   }
 
   @Test public void testCopyrightDateRange() throws JSONException {
